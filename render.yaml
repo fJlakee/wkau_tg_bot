@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telegram-schedule-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js & node bot.js
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+    cronJobs:
+      - schedule: "0 18 * * *"
+        command: npm run update-schedules 

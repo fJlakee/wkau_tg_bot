@@ -533,4 +533,8 @@ schedule.scheduleJob('0 20 * * *', () => {
     });
 });
 
-console.log('Bot is running...'); 
+console.log('Bot is running...');
+process.on('SIGTERM', () => {
+    console.log('SIGTERM received. Shutting down gracefully...');
+    process.exit(0);
+}); 

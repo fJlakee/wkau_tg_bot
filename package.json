@@ -1,0 +1,16 @@
+{
+  "name": "schedule-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for university schedule",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-schedule": "^2.1.1",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
